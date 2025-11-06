@@ -153,44 +153,49 @@ export default function WeddingInvitation() {
         </div>
 
         {/* Location */}
-        <div
-          ref={(el) => (sectionRefs.current["location"] = el)}
-          data-section="location"
-          style={{
-            ...getAnimationStyle("location", "slideRight"),
-            transition: 'all 0.8s ease-out'
-          }}
-          className="bg-white/80 backdrop-blur-md rounded-3xl shadow-2xl p-8 transform transition-all duration-700 hover:scale-105 hover:shadow-3xl"
-        >
-          <div className="flex items-center gap-3 mb-6 group">
-            <MapPin className="w-8 h-8 text-rose-400 group-hover:scale-110 transition-transform duration-300" />
-            <h2 className="text-3xl font-serif text-gray-800">Ubicación</h2>
-          </div>
-          <h3 className="text-2xl font-semibold text-gray-800 mb-4">La Cantina de Don Carlos</h3>
+      <div
+  ref={(el) => (sectionRefs.current["location"] = el)}
+  data-section="location"
+  style={{
+    ...getAnimationStyle("location", "slideRight"),
+    transition: 'all 0.8s ease-out'
+  }}
+  className="bg-white/90 backdrop-blur-md rounded-3xl shadow-2xl p-8 transform transition-all duration-700 hover:scale-105 hover:shadow-3xl"
+>
+  <div className="flex items-center gap-3 mb-6 group">
+    <MapPin className="w-8 h-8 text-rose-400 group-hover:scale-110 transition-transform duration-300" />
+    <h2 className="text-3xl font-serif text-gray-800">Ubicación</h2>
+  </div>
+  <h3 className="text-2xl font-semibold text-gray-800 mb-4">La Cantina de Don Carlos</h3>
 
-          <div className="bg-gradient-to-br from-amber-50 to-rose-100 rounded-2xl p-2 mb-4 overflow-hidden group relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-amber-300/0 via-white/20 to-rose-300/0 group-hover:animate-shimmer pointer-events-none"></div>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.857447892842!2d-64.19039492347654!3d-31.388406874263397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432985c3a756061%3A0x53327df8111f70b6!2sCantina%20Don%20Carlo!5e0!3m2!1ses!2sar!4v1730841234567!5m2!1ses!2sar"
-              className="w-full h-80 rounded-xl relative z-10 border-0"
-              allowFullScreen={true}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Mapa de La Cantina de Don Carlos"
-            ></iframe>
-          </div>
+  {/* ✅ Contenedor corregido */}
+  <div className="rounded-2xl overflow-hidden mb-4 border border-amber-200 shadow-inner">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.857447892842!2d-64.19039492347654!3d-31.388406874263397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432985c3a756061%3A0x53327df8111f70b6!2sCantina%20Don%20Carlo!5e0!3m2!1ses!2sar!4v1730841234567!5m2!1ses!2sar"
+      className="w-full h-80 border-0"
+      allowFullScreen=""
+      sandbox="allow-scripts allow-same-origin allow-popups"
+      loading="eager"
+      style={{
+        pointerEvents: "auto",
+        transform: "none",
+        WebkitTransform: "none",
+        borderRadius: "0.75rem",
+      }}
+      title="Mapa de La Cantina de Don Carlos"
+    ></iframe>
+  </div>
 
-          <div className="space-y-3">
-            <a
-              href="https://www.google.com/maps/place/Cantina+Don+Carlo/@-31.3889409,-64.1898024,16.22z/data=!4m6!3m5!1s0x9432985c3a756061:0x53327df8111f70b6!8m2!3d-31.3884068!4d-64.1881979!16s%2Fg%2F11h40z7wvq?entry=ttu&g_ep=EgoyMDI5MTEwMi4wIKXMDSoASAFQAw%3D%3D"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block w-full bg-gradient-to-r from-rose-400 to-rose-500 hover:from-rose-500 hover:to-rose-600 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 transform hover:scale-105 hover:shadow-lg active:scale-95"
-            >
-              📍 Abrir en Google Maps
-            </a>
-          </div>
-        </div>
+  <a
+    href="https://www.google.com/maps/place/Cantina+Don+Carlo/@-31.3889409,-64.1898024,16.22z"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-block w-full bg-gradient-to-r from-rose-400 to-rose-500 hover:from-rose-500 hover:to-rose-600 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 transform hover:scale-105 hover:shadow-lg active:scale-95"
+  >
+    📍 Abrir en Google Maps
+  </a>
+</div>
+
 
         {/* Celebration */}
         <div
