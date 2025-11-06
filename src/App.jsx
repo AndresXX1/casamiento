@@ -182,7 +182,7 @@ export default function WeddingInvitation() {
 
           <div className="space-y-3">
             <a
-              href="https://www.google.com/maps/place/Cantina+Don+Carlo/@-31.3889409,-64.1898024,16.22z/data=!4m6!3m5!1s0x9432985c3a756061:0x53327df8111f70b6!8m2!3d-31.3884068!4d-64.1881979!16s%2Fg%2F11h40z7wvq?entry=ttu&g_ep=EgoyMDI1MTEwMi4wIKXMDSoASAFQAw%3D%3D"
+              href="https://www.google.com/maps/place/Cantina+Don+Carlo/@-31.3889409,-64.1898024,16.22z/data=!4m6!3m5!1s0x9432985c3a756061:0x53327df8111f70b6!8m2!3d-31.3884068!4d-64.1881979!16s%2Fg%2F11h40z7wvq?entry=ttu&g_ep=EgoyMDI5MTEwMi4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block w-full bg-gradient-to-r from-rose-400 to-rose-500 hover:from-rose-500 hover:to-rose-600 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 transform hover:scale-105 hover:shadow-lg active:scale-95"
@@ -279,6 +279,16 @@ export default function WeddingInvitation() {
           <div className="bg-gradient-to-r from-rose-50 to-pink-50 border-2 border-rose-200 rounded-2xl p-6 mb-6 hover:shadow-lg transition-all duration-300 transform hover:scale-105">
             <p className="text-xl font-semibold text-gray-800 mb-2">Fecha límite: 15 de Diciembre de 2025</p>
             <p className="text-gray-700">Por favor confirmar asistencia y realizar el pago antes de esta fecha.</p>
+          </div>
+
+          {/* PRECIO AGREGADO AQUÍ */}
+          <div className="bg-gradient-to-r from-amber-50 to-rose-50 border-2 border-amber-200 rounded-2xl p-6 mb-6 text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+            <div className="flex items-center justify-center gap-2 mb-2">
+              <CreditCard className="w-6 h-6 text-amber-600" />
+              <h3 className="text-2xl font-bold text-gray-800">Valor por persona</h3>
+            </div>
+            <p className="text-4xl font-bold text-amber-700 mb-2">$40.000</p>
+            <p className="text-gray-600 text-sm">Pesos argentinos</p>
           </div>
 
           <div className="flex items-center gap-3 mb-4 group">
