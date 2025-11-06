@@ -181,14 +181,7 @@ export default function WeddingInvitation() {
   }}
   className="bg-white/90 backdrop-blur-md rounded-3xl shadow-2xl p-8 transform transition-all duration-700 hover:scale-105 hover:shadow-3xl"
 >
-  <div className="flex items-center gap-3 mb-6 group">
-    <MapPin className="w-8 h-8 text-rose-400 group-hover:scale-110 transition-transform duration-300" />
-    <h2 className="text-3xl font-serif text-gray-800">Ubicación</h2>
-  </div>
 
-  <h3 className="text-2xl font-semibold text-gray-800 mb-4">
-    La Cantina de Don Carlos
-  </h3>
 
   {/* ✅ Imagen estática que abre el mapa real de Google */}
   <a
