@@ -172,15 +172,33 @@ export default function WeddingInvitation() {
     La Cantina de Don Carlos
   </h3>
 
-  {/* ✅ Imagen estática que abre Google Maps */}
+<div
+  ref={(el) => (sectionRefs.current["location"] = el)}
+  data-section="location"
+  style={{
+    ...getAnimationStyle("location", "slideRight"),
+    transition: "all 0.8s ease-out",
+  }}
+  className="bg-white/90 backdrop-blur-md rounded-3xl shadow-2xl p-8 transform transition-all duration-700 hover:scale-105 hover:shadow-3xl"
+>
+  <div className="flex items-center gap-3 mb-6 group">
+    <MapPin className="w-8 h-8 text-rose-400 group-hover:scale-110 transition-transform duration-300" />
+    <h2 className="text-3xl font-serif text-gray-800">Ubicación</h2>
+  </div>
+
+  <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+    La Cantina de Don Carlos
+  </h3>
+
+  {/* ✅ Imagen estática que abre el mapa real de Google */}
   <a
-    href="https://www.google.com/maps/place/Cantina+Don+Carlo/@-31.3889409,-64.1898024,16.22z"
+    href="https://www.google.com/maps/place/Cantina+Don+Carlo/@-31.3884068,-64.1907728,17z/data=!3m1!4b1!4m6!3m5!1s0x9432985c3a756061:0x53327df8111f70b6!8m2!3d-31.3884068!4d-64.1881979!16s%2Fg%2F11h40z7wvq?entry=ttu"
     target="_blank"
     rel="noopener noreferrer"
     className="block rounded-2xl overflow-hidden border border-amber-200 shadow-inner mb-4"
   >
     <img
-      src="/mapa_luz_guille.jpg" // 🔹 poné tu imagen aquí (ej: en /public)
+      src="/mapa_luz_guille.jpg" // 📸 tu imagen estática (en /public)
       alt="Ubicación - La Cantina de Don Carlos"
       className="w-full h-80 object-cover hover:scale-105 transition-transform duration-700"
       style={{ borderRadius: "0.75rem" }}
@@ -188,9 +206,9 @@ export default function WeddingInvitation() {
     />
   </a>
 
-  {/* Botón para abrir Google Maps */}
+  {/* ✅ Botón que abre el mismo enlace */}
   <a
-    href="https://www.google.com/maps/place/Cantina+Don+Carlo/@-31.3889409,-64.1898024,16.22z"
+    href="https://www.google.com/maps/place/Cantina+Don+Carlo/@-31.3884068,-64.1907728,17z/data=!3m1!4b1!4m6!3m5!1s0x9432985c3a756061:0x53327df8111f70b6!8m2!3d-31.3884068!4d-64.1881979!16s%2Fg%2F11h40z7wvq?entry=ttu"
     target="_blank"
     rel="noopener noreferrer"
     className="inline-block w-full bg-gradient-to-r from-rose-400 to-rose-500 hover:from-rose-500 hover:to-rose-600 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 transform hover:scale-105 hover:shadow-lg active:scale-95"
@@ -199,7 +217,7 @@ export default function WeddingInvitation() {
   </a>
 </div>
 
-
+</div>
 
         {/* Celebration */}
         <div
