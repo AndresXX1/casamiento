@@ -152,13 +152,14 @@ export default function WeddingInvitation() {
           </div>
         </div>
 
-        {/* Location */}
-      <div
+  {/* Location */}
+{/* Location */}
+<div
   ref={(el) => (sectionRefs.current["location"] = el)}
   data-section="location"
   style={{
     ...getAnimationStyle("location", "slideRight"),
-    transition: 'all 0.8s ease-out'
+    transition: "all 0.8s ease-out",
   }}
   className="bg-white/90 backdrop-blur-md rounded-3xl shadow-2xl p-8 transform transition-all duration-700 hover:scale-105 hover:shadow-3xl"
 >
@@ -166,35 +167,38 @@ export default function WeddingInvitation() {
     <MapPin className="w-8 h-8 text-rose-400 group-hover:scale-110 transition-transform duration-300" />
     <h2 className="text-3xl font-serif text-gray-800">Ubicación</h2>
   </div>
-  <h3 className="text-2xl font-semibold text-gray-800 mb-4">La Cantina de Don Carlos</h3>
 
-  {/* ✅ Contenedor corregido */}
-  <div className="rounded-2xl overflow-hidden mb-4 border border-amber-200 shadow-inner">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.857447892842!2d-64.19039492347654!3d-31.388406874263397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432985c3a756061%3A0x53327df8111f70b6!2sCantina%20Don%20Carlo!5e0!3m2!1ses!2sar!4v1730841234567!5m2!1ses!2sar"
-      className="w-full h-80 border-0"
-      allowFullScreen=""
-      sandbox="allow-scripts allow-same-origin allow-popups"
-      loading="eager"
-      style={{
-        pointerEvents: "auto",
-        transform: "none",
-        WebkitTransform: "none",
-        borderRadius: "0.75rem",
-      }}
-      title="Mapa de La Cantina de Don Carlos"
-    ></iframe>
-  </div>
+  <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+    La Cantina de Don Carlos
+  </h3>
 
+  {/* ✅ Imagen estática que abre Google Maps */}
+  <a
+    href="https://www.google.com/maps/place/Cantina+Don+Carlo/@-31.3889409,-64.1898024,16.22z"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="block rounded-2xl overflow-hidden border border-amber-200 shadow-inner mb-4"
+  >
+    <img
+      src="/mapa_luz_guille.jpg" // 🔹 poné tu imagen aquí (ej: en /public)
+      alt="Ubicación - La Cantina de Don Carlos"
+      className="w-full h-80 object-cover hover:scale-105 transition-transform duration-700"
+      style={{ borderRadius: "0.75rem" }}
+      loading="lazy"
+    />
+  </a>
+
+  {/* Botón para abrir Google Maps */}
   <a
     href="https://www.google.com/maps/place/Cantina+Don+Carlo/@-31.3889409,-64.1898024,16.22z"
     target="_blank"
     rel="noopener noreferrer"
     className="inline-block w-full bg-gradient-to-r from-rose-400 to-rose-500 hover:from-rose-500 hover:to-rose-600 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 transform hover:scale-105 hover:shadow-lg active:scale-95"
   >
-    📍 Abrir en Google Maps
+    📍 Ver ubicación en Google Maps
   </a>
 </div>
+
 
 
         {/* Celebration */}
