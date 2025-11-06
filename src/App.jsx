@@ -297,7 +297,7 @@ export default function WeddingInvitation() {
           </div>
 
           <div className="bg-gradient-to-r from-rose-50 to-pink-50 border-2 border-rose-200 rounded-2xl p-6 mb-6 hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-            <p className="text-xl font-semibold text-gray-800 mb-2">Fecha límite: 15 de Diciembre de 2025</p>
+            <p className="text-xl font-semibold text-gray-800 mb-2">Fecha límite: 10 de Diciembre de 2025</p>
             <p className="text-gray-700">Por favor confirmar asistencia y realizar el pago antes de esta fecha.</p>
           </div>
 
@@ -324,11 +324,6 @@ export default function WeddingInvitation() {
               </p>
             </div>
 
-            <div className="bg-white border-2 border-dashed border-gray-300 rounded-2xl p-8 hover:border-rose-300 transition-all duration-300 hover:bg-rose-50/30">
-              <p className="text-gray-600 text-center">
-                [espacio para el qr "si es que es de mercado pago se hace el link de pago desde la app"]
-              </p>
-            </div>
           </div>
         </div>
 
